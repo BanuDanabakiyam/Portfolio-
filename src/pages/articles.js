@@ -37,7 +37,7 @@ const MovingImg = ({title,img,link}) => {
             <h2 className="capitalize text-xl font-semibold hover:underline">{title}</h2>
             <FramerImage 
             style={{x:x,y:y}}
-            src={img} ref={imgRef} alt="title" className="w-96 h-auto hidden absolute rounded-lg"></FramerImage>
+            src={img} ref={imgRef} alt="title" className="z-10 w-96 h-auto hidden absolute rounded-lg"></FramerImage>
             </Link>
             
 
