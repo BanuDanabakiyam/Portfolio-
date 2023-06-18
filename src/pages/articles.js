@@ -39,6 +39,8 @@ const MovingImg = ({title,img,link}) => {
             <h2 className="capitalize text-xl font-semibold hover:underline">{title}</h2>
             <FramerImage 
             style={{x:x,y:y}}
+            initial={{opacity:0}}
+            whileInView={{opacity:1, transition:{duration:0.2}}}
             src={img} ref={imgRef} alt="title" className="z-10 w-96 h-auto hidden absolute rounded-lg"></FramerImage>
             </Link>
             
@@ -48,13 +50,17 @@ const MovingImg = ({title,img,link}) => {
 
 const Article = ({img,title,date,link}) => {
     return(
-        <li className="relative w-full p-4 py-6 my-4 rounded-xl flex items-center justify-between bg-light
+        <motion.li
+        initial={{y:200}}
+        whileInView={{y:0, transition:{duration:0.5, ease:"easeInOut"}}}
+        viewport={{once:true}}
+        className="relative w-full p-4 py-6 my-4 rounded-xl flex items-center justify-between bg-light
         text-dark first:mt-0 border border-solid border-dark border-r-4 border-b-4
         ">
             <MovingImg title={title} img={img} link={link}></MovingImg>
             
             <span className="text-primary font-semibold pl-4">{date}</span>
-        </li>
+        </motion.li>
     );
 }
 
