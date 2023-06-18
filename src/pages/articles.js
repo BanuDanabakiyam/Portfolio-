@@ -35,7 +35,9 @@ const MovingImg = ({title,img,link}) => {
         onMouseLeave={handleMoveLeave}
         >
             <h2 className="capitalize text-xl font-semibold hover:underline">{title}</h2>
-            <FramerImage src={img} ref={imgRef} alt="title" className="w-96 h-auto hidden absolute rounded-lg"></FramerImage>
+            <FramerImage 
+            style={{x:x,y:y}}
+            src={img} ref={imgRef} alt="title" className="w-96 h-auto hidden absolute rounded-lg"></FramerImage>
             </Link>
             
 
