@@ -8,6 +8,8 @@ import { motion,useMotionValue } from "framer-motion";
 import article1 from '../../public/images/articles/pagination component in reactjs.jpg';
 import article2 from "../../public/images/articles/create loading in reactjs.jpg";
 import article3 from "../../public/images/articles/create modal component in react using react portals.png";
+import article4 from "../../public/images/articles/form Validation in reactjs using custom react Hook.png";
+import article5 from "../../public/images/articles/smooth scrolling in reactjs.png";
 
 const FramerImage = motion(Image);
 
@@ -37,7 +39,7 @@ const MovingImg = ({title,img,link}) => {
             <h2 className="capitalize text-xl font-semibold hover:underline">{title}</h2>
             <FramerImage 
             style={{x:x,y:y}}
-            src={img} ref={imgRef} alt="title" className="w-96 h-auto hidden absolute rounded-lg"></FramerImage>
+            src={img} ref={imgRef} alt="title" className="z-10 w-96 h-auto hidden absolute rounded-lg"></FramerImage>
             </Link>
             
 
@@ -121,7 +123,7 @@ const Articles = () => {
                     title="Form Validation In Reactjs: Build A Reusable Custom Hook For Inputs And Error Handling"
                     date="June 18 2023"
                     link="/"
-                    img={article3}
+                    img={article4}
                     >
 
                     </Article>
@@ -129,15 +131,7 @@ const Articles = () => {
                     title="Form Validation In Reactjs: Build A Reusable Custom Hook For Inputs And Error Handling"
                     date="June 18 2023"
                     link="/"
-                    img={article3}
-                    >
-
-                    </Article>
-                    <Article
-                    title="Form Validation In Reactjs: Build A Reusable Custom Hook For Inputs And Error Handling"
-                    date="June 18 2023"
-                    link="/"
-                    img={article3}
+                    img={article5}
                     >
 
                     </Article>
