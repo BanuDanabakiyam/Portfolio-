@@ -8,6 +8,7 @@ import profilePic from "../../public/images/profile/developer-pic-2.jpeg";
 import React, { use, useEffect, useRef } from "react";
 import Image from "next/image";
 import { motion, useInView, useMotionValue, useSpring } from "framer-motion";
+import TransitionEffect from "@/components/TransitionEffect";
 const AnimatedNumbers = ({value}) => {
     const ref = useRef(null);
     const motionValue = useMotionValue(0);
@@ -39,6 +40,7 @@ const about = () => {
             <title>CodeBucks | About Page</title>
             <meta name="description" content="any description"></meta>
         </Head>
+        <TransitionEffect/>
         <main className="flex w-full flex-col items-center justify-center dark:text-light ">
             <Layout className="pt-16">
                 <AnimatedText text="Passion Fuels Purpose!" className="mb-12 lg:!text-7xl sm:!text-6xl xs:!text-4xl sm:mb-8"/>
